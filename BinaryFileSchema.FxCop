@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="Binary File Schema">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="da-DK" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/BinaryFileSchema/bin/Debug/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/BinaryFileSchema/bin/Release/BinaryFileSchema.dll" Analyze="False" AnalyzeAllChildren="False">
+   <Modules AnalyzeAllChildren="False">
+    <Module Name="binaryfileschema.dll" Analyze="True" AnalyzeAllChildren="False">
+     <Namespaces AnalyzeAllChildren="False">
+      <Namespace Name="" Analyze="True" AnalyzeAllChildren="True" />
+      <Namespace Name="BFSchema" Analyze="True" AnalyzeAllChildren="False">
+       <Types AnalyzeAllChildren="False">
+        <Type Name="AstConvert" Analyze="True" AnalyzeAllChildren="False">
+         <Members AnalyzeAllChildren="False">
+          <Member Name="#.ctor(System.String)" Analyze="True" />
+          <Member Name="#ConvertActionList(Peg.Base.PegNode,System.Collections.Generic.IList`1&lt;BFSchema.IBfsAction&gt;)" Analyze="True" />
+          <Member Name="#ConvertArrayExtension(Peg.Base.PegNode)" Analyze="True" />
+          <Member Name="#ConvertBitfieldField(Peg.Base.PegNode,BFSchema.BfsBitfield)" Analyze="True" />
+          <Member Name="#ConvertBitfieldType(Peg.Base.PegNode,BFSchema.BfsBitfield)" Analyze="True" />
+          <Member Name="#ConvertEnumField(Peg.Base.PegNode,BFSchema.BfsEnum)" Analyze="True" />
+          <Member Name="#ConvertEnumType(Peg.Base.PegNode,BFSchema.BfsEnum)" Analyze="True" />
+          <Member Name="#ConvertExpNodes(BFSchema.BfsExpGroup,Peg.Base.PegNode)" Analyze="True" />
+          <Member Name="#ConvertExpression(Peg.Base.PegNode)" Analyze="True" />
+          <Member Name="#ConvertLocalField(Peg.Base.PegNode,BFSchema.IBfsDataBlock)" Analyze="True" />
+          <Member Name="#ConvertPrimitiveType(Peg.Base.PegNode)" Analyze="True" />
+          <Member Name="#ConvertStructField(Peg.Base.PegNode,BFSchema.BfsStructField)" Analyze="True" />
+          <Member Name="#ConvertStructType(Peg.Base.PegNode,BFSchema.IBfsStructType)" Analyze="True" />
+          <Member Name="#ConvertType(Peg.Base.PegNode)" Analyze="True" />
+          <Member Name="#GetNodeText(Peg.Base.PegNode)" Analyze="True" />
+          <Member Name="#schema" Analyze="True" />
+          <Member Name="#source" Analyze="True" />
+          <Member Name="#StoreSourceRange(Peg.Base.PegNode,BFSchema.IBfsSourceNode)" Analyze="True" />
+         </Members>
+        </Type>
+        <Type Name="AstConvertException" Analyze="True" AnalyzeAllChildren="False">
+         <Members AnalyzeAllChildren="False">
+          <Member Name="#.ctor()" Analyze="True" />
+          <Member Name="#.ctor(System.String)" Analyze="True" />
+          <Member Name="#.ctor(System.String,System.Exception)" Analyze="True" />
+         </Members>
+        </Type>
+        <Type Name="BfsAbsOffset" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsActionAssignment" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsActionOutput" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsBitfield" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsBitfieldField" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsByteOrder" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsCompiler" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsEnum" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsEnumElse" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsEnumField" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsEnumRange" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsEnumValue" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsExpGroup" Analyze="True" AnalyzeAllChildren="False">
+         <Members AnalyzeAllChildren="False">
+          <Member Name="#.ctor()" Analyze="True" />
+          <Member Name="#&lt;Members&gt;k__BackingField" Analyze="True" />
+          <Member Name="#&lt;PrimitiveType&gt;k__BackingField" Analyze="True" />
+          <Member Name="#&lt;SourceRange&gt;k__BackingField" Analyze="True" />
+          <Member Name="#Members" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#PrimitiveType" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#SourceRange" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#ToString()" Analyze="True" />
+         </Members>
+        </Type>
+        <Type Name="BfsExpression" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsExpressionVariable" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsFunctionType" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsKnownArray" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsLocalField" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsNamedType" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsNumberExp" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsOperator" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsPrimitiveType" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsPrimitiveTypeEnum" Analyze="True" AnalyzeAllChildren="False">
+         <Members AnalyzeAllChildren="False">
+          <Member Name="#Bool" Analyze="True" />
+          <Member Name="#EnumMember" Analyze="True" />
+          <Member Name="#Int" Analyze="True" />
+          <Member Name="#Long" Analyze="True" />
+          <Member Name="#Sbyte" Analyze="True" />
+          <Member Name="#Short" Analyze="True" />
+          <Member Name="#Ubyte" Analyze="True" />
+          <Member Name="#Uint" Analyze="True" />
+          <Member Name="#Ulong" Analyze="True" />
+          <Member Name="#Undetermined" Analyze="True" />
+          <Member Name="#Ushort" Analyze="True" />
+          <Member Name="#value__" Analyze="True" />
+         </Members>
+        </Type>
+        <Type Name="BfsRelOffset" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsSourceRange" Analyze="True" AnalyzeAllChildren="False">
+         <Members AnalyzeAllChildren="False">
+          <Member Name="#&lt;Begin&gt;k__BackingField" Analyze="True" />
+          <Member Name="#&lt;Length&gt;k__BackingField" Analyze="True" />
+          <Member Name="#Begin" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#Length" Analyze="True" AnalyzeAllChildren="True" />
+         </Members>
+        </Type>
+        <Type Name="BfsStruct" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsStructField" Analyze="True" AnalyzeAllChildren="False">
+         <Members AnalyzeAllChildren="False">
+          <Member Name="#.ctor()" Analyze="True" />
+          <Member Name="#&lt;Conditional&gt;k__BackingField" Analyze="True" />
+          <Member Name="#&lt;Name&gt;k__BackingField" Analyze="True" />
+          <Member Name="#&lt;Skip&gt;k__BackingField" Analyze="True" />
+          <Member Name="#&lt;SourceRange&gt;k__BackingField" Analyze="True" />
+          <Member Name="#Conditional" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#Name" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#Skip" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#SourceRange" Analyze="True" AnalyzeAllChildren="True" />
+          <Member Name="#ToString()" Analyze="True" />
+         </Members>
+        </Type>
+        <Type Name="BfsUnknownArray" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsUnresolvedNamedType" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BfsUnresolvedVariableExp" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="BinaryFileSchema" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="Environments" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="IBfsAction" Analyze="True" />
+        <Type Name="IBfsArray" Analyze="True" />
+        <Type Name="IBfsDataBlock" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="IBfsEnumMember" Analyze="True" />
+        <Type Name="IBfsErrorHandler" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="IBfsExpNode" Analyze="True" />
+        <Type Name="IBfsSourceNode" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="IBfsStructType" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="IBfsType" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="IPhase" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="SourceError" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="StreamErrorHandler" Analyze="True" AnalyzeAllChildren="True" />
+        <Type Name="TypeLinking" Analyze="True" AnalyzeAllChildren="True" />
+       </Types>
+      </Namespace>
+     </Namespaces>
+     <Resources AnalyzeAllChildren="True" />
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Targets>
+   <Target Name="$(ProjectDir)/BinaryFileSchema/bin/Release/BinaryFileSchema.dll">
+    <Modules>
+     <Module Name="binaryfileschema.dll">
+      <Messages>
+       <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Created="2009-01-12 23:31:05Z">
+        <Issue Name="NoStrongName">
+         <Item>'BinaryFileSchema.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="BFSchema">
+        <Types>
+         <Type Name="BfsAbsOffset">
+          <Members>
+           <Member Name="#LocalFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsAbsOffset.LocalFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsAbsOffset.LocalFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsAbsOffset.StructFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsAbsOffset.StructFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsBitfield">
+          <Members>
+           <Member Name="#BitFieldFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsBitfield.BitFieldFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsBitfield.LocalFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsBitfield.LocalFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsBitfieldField">
+          <Members>
+           <Member Name="#Actions">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsBitfieldField.Actions'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsEnum">
+          <Members>
+           <Member Name="#EnumAliases">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsEnum.EnumAliases'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#EnumFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsEnum.EnumFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsEnum.LocalFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsEnum.LocalFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsEnumField">
+          <Members>
+           <Member Name="#Actions">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsEnumField.Actions'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsExpGroup">
+          <Members>
+           <Member Name="#Members">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsExpGroup.Members'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsExpression">
+          <Members>
+           <Member Name="#DependantVariables">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-03-01 11:51:00Z">
+              <Issue>
+               <Item>'BfsExpression.DependantVariables'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsExpressionVariable">
+          <Members>
+           <Member Name="#NameHierarchy">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsExpressionVariable.NameHierarchy'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsRelOffset">
+          <Members>
+           <Member Name="#LocalFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsRelOffset.LocalFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsRelOffset.LocalFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsRelOffset.StructFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsRelOffset.StructFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsStruct">
+          <Members>
+           <Member Name="#LocalFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsStruct.LocalFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsStruct.LocalFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsStruct.StructFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsStruct.StructFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsUnknownArray">
+          <Members>
+           <Member Name="#OrWords">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsUnknownArray.OrWords'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StopCases">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-13 02:05:32Z">
+              <Issue>
+               <Item>'BfsUnknownArray.StopCases'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BfsUnresolvedVariableExp">
+          <Members>
+           <Member Name="#NameHierarchy">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BfsUnresolvedVariableExp.NameHierarchy'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="BinaryFileSchema">
+          <Members>
+           <Member Name="#DatablockList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BinaryFileSchema.DatablockList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DataBlocks">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'BinaryFileSchema.DataBlocks'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="Environments">
+          <Members>
+           <Member Name="#Check(BFSchema.BinaryFileSchema)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-01-13 02:05:32Z">
+              <Issue Name="Local">
+               <Item>'block'</Item>
+               <Item>'BfsBitfield'</Item>
+               <Item>'Environments.Check(BinaryFileSchema)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'block'</Item>
+               <Item>'BfsEnum'</Item>
+               <Item>'Environments.Check(BinaryFileSchema)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'block'</Item>
+               <Item>'IBfsStructType'</Item>
+               <Item>'Environments.Check(BinaryFileSchema)'</Item>
+               <Item>isint</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IBfsAction">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Excluded" Created="2009-01-13 02:05:32Z">
+            <Issue>
+             <Item>'IBfsAction'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IBfsArray">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Excluded" Created="2009-01-13 02:05:32Z">
+            <Issue>
+             <Item>'IBfsArray'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IBfsDataBlock">
+          <Members>
+           <Member Name="#LocalFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'IBfsDataBlock.LocalFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#LocalFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'IBfsDataBlock.LocalFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IBfsEnumMember">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Excluded" Created="2009-01-13 02:05:32Z">
+            <Issue>
+             <Item>'IBfsEnumMember'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IBfsExpNode">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Status="Excluded" Created="2009-01-13 02:28:32Z">
+            <Issue>
+             <Item>'IBfsExpNode'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IBfsStructType">
+          <Members>
+           <Member Name="#StructFieldList">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'IBfsStructType.StructFieldList'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructFields">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Excluded" Created="2009-01-19 01:06:00Z">
+              <Issue>
+               <Item>'IBfsStructType.StructFields'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="TypeLinking">
+          <Members>
+           <Member Name="#Check(BFSchema.BinaryFileSchema)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-01-13 02:05:32Z">
+              <Issue Name="Local">
+               <Item>'block'</Item>
+               <Item>'BfsBitfield'</Item>
+               <Item>'TypeLinking.Check(BinaryFileSchema)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'block'</Item>
+               <Item>'BfsEnum'</Item>
+               <Item>'TypeLinking.Check(BinaryFileSchema)'</Item>
+               <Item>isint</Item>
+              </Issue>
+              <Issue Name="Local">
+               <Item>'block'</Item>
+               <Item>'IBfsStructType'</Item>
+               <Item>'TypeLinking.Check(BinaryFileSchema)'</Item>
+               <Item>isint</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CheckActionList(System.Collections.Generic.IList`1&lt;BFSchema.IBfsAction&gt;,BFSchema.IBfsDataBlock)">
+            <Messages>
+             <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Created="2009-01-19 01:06:00Z">
+              <Issue Name="Local">
+               <Item>'action'</Item>
+               <Item>'BfsActionUnresolvedAssignment'</Item>
+               <Item>'TypeLinking.CheckActionList(IList&lt;IBfsAction&gt;, IBfsDataBlock)'</Item>
+               <Item>isint</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+    <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   </Rule>
+   <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
+    <Resolution Name="Default">Define a custom attribute to replace {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+    <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+    <Resolution Name="Local">{0}, a variable, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

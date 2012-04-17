@@ -1,0 +1,95 @@
+<<Grammar
+	Name="BinaryFileSchemaParser"
+	encoding_class="unicode" 
+	encoding_detection="FirstCharIsAscii"
+	reference="www.andersriggelsen.dk/binaryfileschema.php"
+>>
+
+^^bfschema:				S byteorder? S datablocks S (!./FATAL<"Expected end of file">);
+
+S:						(whitespace / comment)*;
+whitespace:				[ \t\r\n];
+
+comment:				singleline_comment / multiline_comment;
+singleline_comment:		'//' [^#x000D#x000A#x0085#x2028#x2029]*;
+multiline_comment:		'/*' ( !'*/' . )* '*/';
+
+valid_item_name:		[_a-zA-Z][_a-zA-Z0-9]*;
+
+^^byteorder:			'byteOrdering' S @'::' S ( littleendian / bigendian / FATAL<"'little-endian' or 'big-endian' expected."> ) S @';'; 
+^^littleendian:			'little-endian';
+^^bigendian:			'big-endian';
+^^skip:					'skip' S;	
+^^conditional:			'if' S '(' S expression S ')' S;
+
+^^formatspecifier:		'format';
+datablocks:				(datablock S)+ / FATAL<"Datablock expected">;
+datablock:				(struct / rel_offset / abs_offset / enum / bitfield) S;
+^^field:				skip? conditional? fieldname S '::' S type @';';
+^^localfield:			'local' S @fieldname S @'::' S @primitivetype S localassignment? @';'; 
+localassignment: 		'=' S expression S;
+^^type:					(primitivetype / functiontype / namedtype / FATAL<"primitive, named or function type expected">) S (arrayknown / arrayunknown)? S;
+^^primitivetype:		'bool' / 'sbyte' / 'ubyte' / 'short' / 'ushort' / 'int' / 'uint' / 'long' / 'ulong';
+^^namedtype:			valid_item_name;
+^^functiontype:			functionname S '(' S @string S ')' S;
+^^functionname:			valid_item_name;
+
+^^action_list:			'[' S (actions / FATAL<"Empty action list">) S @']' S;
+actions:				action (',' S actions )?;
+action:					assignment / output;
+^^assignment:			varname S '=' S @expression S;
+^^output:				^('warning'/'error'/'debug') S @'(' S @string S @')' S;
+
+^^blockname:			valid_item_name;
+
+^^string:				'"' ( !'"' . )* '"';
+^^hex:					'0x' hexbyte+;
+hexbyte:				[0-9A-Fa-f] ([0-9A-Fa-f] / FATAL<"Two hex chars required per byte.">);
+^^EOF:					'EOF';
+
+^^fieldname:			valid_item_name;
+
+^^arrayknown:			'[' expression @']';
+^^arrayunknown:			'[' S ']' S ^'until' S stoplist S;
+
+stoplist:				stopcase S (or_keyword S stoplist S )? S;
+^or_keyword:			'or';
+^^stopcase:				( stopword S inclusion? S) / EOF / FATAL<"Hex, string or EOF expected">;
+stopword:				string / hex;
+^^inclusion:			'included' / 'excluded' / 'skipped';
+
+^^struct:				formatspecifier? S ^'struct'     S @blockname S compression? S						   @'{' S (localfield S)* (field S)+ @'}' S;
+^^rel_offset:			formatspecifier? S ^'rel_offset' S @blockname S compression? S '::' S @primitivetype S @'{' S (localfield S)* (field S)+ @'}' S;
+^^abs_offset:			formatspecifier? S ^'abs_offset' S @blockname S compression? S '::' S @primitivetype S @'{' S (localfield S)* (field S)+ @'}' S;
+^^enum:					formatspecifier? S ^'enum'       S @blockname				 S '::' S @primitivetype S @'{' S (localfield S)* (enumfield S)+ @'}' S;
+^^bitfield:				formatspecifier? S ^'bitfield'   S @blockname				 S '::' S @primitivetype S @'{' S (localfield S)* (bit S)+ @'}' S;
+
+compression:			'<' S compressionmethod S '>';
+^^compressionmethod:	valid_item_name;
+
+^^enumfield:			( number / enumrange / else ) S nameoractions? @';';
+^^else:					'else';
+^^enumrange:			^('['/']') S @number S @'..' S @number S ^('['/']');
+^^enumname:				valid_item_name;
+nameoractions:			':' S enumname? S action_list? S;
+
+^^bitname:				valid_item_name;
+^^bit:					number S (':' S bitname? S action_list?)? @';';
+
+^^expression:			S logical;
+^logical:				bitwise (^('&&'/'||') S @bitwise)*;
+^bitwise:				comp (^('^'/'&'/ ('|' !'|')) S @comp)*;
+^comp:					shift (^('!='/'=='/'<='/'>='/'<'/'>') S @shift)*;
+^shift:					sum (^('>>'/'<<') S @sum)*;
+^sum:					prod (^[+-] S @prod)*;
+^prod:					value (^[*/%] S @value)*;
+
+value:					( number / '(' S logical S @')' S / call / named_value ) S;
+^call:					invoke_name S '(' S @(^valid_item_name) S @')' S;
+^number:				[0-9]+;
+^invoke_name:			valid_item_name;
+^^named_value:			namelist;
+namelist:				varname ('.' namelist )?;
+^varname:				valid_item_name;
+
+<</Grammar>>

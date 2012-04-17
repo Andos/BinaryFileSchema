@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFileSchema", "BinaryFileSchema\BinaryFileSchema.csproj", "{B99A0149-B187-4075-AD79-A36A084BF73A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFileSchemaGUI", "BinaryFileSchemaGUI\BinaryFileSchemaGUI.csproj", "{0FBAE211-1E37-4CE8-AE39-59E67D78F4A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PEG Base", "PegBase\PEG Base.csproj", "{9913580D-1543-40D5-B463-14C95BF3120C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFileInspectorGUI", "BinaryFileInspectorGUI\BinaryFileInspectorGUI.csproj", "{BE8E0D41-8057-4F42-B4AD-EB992531EC98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineGenerator", "WebGenerator\CommandLineGenerator.csproj", "{B569D745-AAB4-47CB-AAF7-80351C36E31D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFileGenerator", "TestFileGenerator\TestFileGenerator.csproj", "{6ADA732D-754B-41B7-8C87-033153BBF6B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B99A0149-B187-4075-AD79-A36A084BF73A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99A0149-B187-4075-AD79-A36A084BF73A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99A0149-B187-4075-AD79-A36A084BF73A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99A0149-B187-4075-AD79-A36A084BF73A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBAE211-1E37-4CE8-AE39-59E67D78F4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBAE211-1E37-4CE8-AE39-59E67D78F4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBAE211-1E37-4CE8-AE39-59E67D78F4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBAE211-1E37-4CE8-AE39-59E67D78F4A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9913580D-1543-40D5-B463-14C95BF3120C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9913580D-1543-40D5-B463-14C95BF3120C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9913580D-1543-40D5-B463-14C95BF3120C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9913580D-1543-40D5-B463-14C95BF3120C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8E0D41-8057-4F42-B4AD-EB992531EC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8E0D41-8057-4F42-B4AD-EB992531EC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8E0D41-8057-4F42-B4AD-EB992531EC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8E0D41-8057-4F42-B4AD-EB992531EC98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B569D745-AAB4-47CB-AAF7-80351C36E31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B569D745-AAB4-47CB-AAF7-80351C36E31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B569D745-AAB4-47CB-AAF7-80351C36E31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B569D745-AAB4-47CB-AAF7-80351C36E31D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ADA732D-754B-41B7-8C87-033153BBF6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADA732D-754B-41B7-8C87-033153BBF6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADA732D-754B-41B7-8C87-033153BBF6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADA732D-754B-41B7-8C87-033153BBF6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
