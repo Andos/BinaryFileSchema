@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PEG Base", "PegBase\PEG Bas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFileInspectorGUI", "BinaryFileInspectorGUI\BinaryFileInspectorGUI.csproj", "{BE8E0D41-8057-4F42-B4AD-EB992531EC98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineGenerator", "WebGenerator\CommandLineGenerator.csproj", "{B569D745-AAB4-47CB-AAF7-80351C36E31D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineGenerator", "CommandLineGenerator\CommandLineGenerator.csproj", "{B569D745-AAB4-47CB-AAF7-80351C36E31D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFileGenerator", "TestFileGenerator\TestFileGenerator.csproj", "{6ADA732D-754B-41B7-8C87-033153BBF6B1}"
 EndProject
