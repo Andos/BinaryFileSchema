@@ -23,3 +23,12 @@ Features so far
 * Compression - Automatically handles compressed structures of data (C# generator supports GZip and Deflate)
 
 The aim is not to be able to express all kinds of binary files but at least attempt to express most types of formats in a simple syntax.
+
+Credits:
+--------
+Parsing Expression Grammar generator:
+	http://www.codeproject.com/Articles/29713/Parsing-Expression-Grammar-Support-for-C-3-0-Part
+
+Silk icons for the GUI:
+	http://www.famfamfam.com/lab/icons/silk/
+	
