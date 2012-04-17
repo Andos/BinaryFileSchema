@@ -1,0 +1,103 @@
+﻿
+Parser+Weeder
+=============
+	* Convert parser-AST into manageble AST.
+
+Environments
+============
+	General:
+	--------
+	* Check that only one block is declared 'format'.
+	* Check that no two blocks have the same name.
+	* Build map of named types to their AST object.
+	* Check that no local variables are named "value" as it is reserved.
+	
+	Structs:
+	--------
+	* Check that no two struct fields in the same block have the same name.
+	* Check that no local variables have the same name as local variables.
+	* Check that no struct variables are named "value" as it is reserved.
+	
+	Check that only supported compressions methods are defined
+	Check that no ascii stop cases are empty strings + trim their quotes
+	
+
+	Enums:
+	------
+	* Check that no numbers or ranges intersect.
+	* Check that there is only one 'else'.
+	* Check that start-range isn't bigger than end-range
+	* Check that the exclusion of the range isn't empty or of size 1 (ex.: ]0..1[,  [0..1[ )
+	* Build map over the enum aliases (string -> BfsEnumFieldAlias)
+	
+	Bitfields:
+	----------
+	* Check that no bit-indexes are listed twice.
+	* Check that no bit-names are listed twice.
+	* Check that the bit-indexes doesn't exeed the size of the primitive type.
+	
+
+TypeLinking 
+===========
+	* Link all unresolved field-types to their declarations (data-blocks).
+	* Link all assignment actions to their local variable (BfsActionUnresolvedAssignment -> BfsActionAssignment)
+	
+	
+Hierarchy
+=========
+	* Resolve all unresolved expression variables into a BFSExpressionVariable hiearchy.
+	* Check that the variables exists in the hiearchy structure (ex. "a.b.c" that b exists in a and c exists in b)
+	(postponed) Check that there are no circular references of struct-types unless there are conditionals.
+	* Make map of all dependant variables at the root of Expressions (for Definite Assignment)
+	
+	* Check that 'value' expressions values are only used in consumed types.
+	* Check that the argument in a 'sizeof()' call is a datablock type.
+	
+	* Check that BFSExpressionEnumName are only used in an equals '==' or not equal '!=' comparisson
+		+ that it is compared against a variable of enum-type.
+		
+	* Check that no unknown sized arrays are located within any structure that is compressed (seeking not allowed)
+	
+	Check the above case but indirect structs (if any non-compressed structs are contained within a compressed struct, it is also compressed)
+	
+TypeChecking
+============
+	* Resolve the type of all expressions.
+	* Check that the type of conditionals have the type 'bool'.
+	* Check that the types of the expressions match the type they are assigned to.
+	* Check that known array extension expressions are of type bigger than bool.
+	* Check that the expressions are of a boolean type, primitive type or ConsumedType (which is a primitive type).
+	* Check that no part of expression values are of a type with an array extension.
+	* Check that no functon types (ascii ect) are used in expressions.
+
+DefiniteAssignment
+==================
+	* Check that local-fields aren't used in their own intialization expression.
+	* Check that struct-fields aren't used in their own conditional expression.
+	* Check that no variables in conditional expressions or known array expressions aren't read from the file yet.
+	* Check that no struct fields come after an unknown array extension only terminating at EOF (unreachable)
+	* Check that no stopcases comes after an EOF (give warning)
+
+	Check that all local variables are assigned to before use.
+	
+	* Perform a topological sort of dependencies in local variables to find out
+	 if a value is used before it is read from the file as well as when the value
+	 should be assigned to in the parsing process.
+			
+CodeGeneration
+==============
+
+	Generate a class for each datablock in the schema with it's name.
+	Make a check that abs_offset and rel_offset values doesn't read from offset 0.
+
+	
+Future prospects
+================
+
+String datatype (ascii/utf8/utf16/utf32/python) for types and expressions (can compare)
+Constant datatypes for int() long()	- fx. expecting a piece of data interpreted as long(42)
+Give parameters into structs:     var :: type(param)[arrExt];
+  - useful for passing on sizes of internal arrays and such.
+  - Probably needs revision of ascii("hello") syntax into ascii["hello"].
+
+	
