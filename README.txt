@@ -3,6 +3,9 @@ Binary File Schema
 
 http://www.andersriggelsen.dk/binaryfileschema.php
 
+Executable file here:
+http://www.andersriggelsen.dk/files/fileschema/BinaryFileSchemaGUI.zip
+
 Binary File Schemas is a project of mine that will allow you to define the structure of various binary files.
 There are quite a lot of uses for this:
 
